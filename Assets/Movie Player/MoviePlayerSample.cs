@@ -139,7 +139,7 @@ public class MoviePlayerSample : MonoBehaviour
 
 		if (mediaRenderer.material == null || mediaRenderer.material.mainTexture == null)
 		{
-			Debug.LogError("No material for movie surface");
+//			Debug.LogError("No material for movie surface");
 		}
 
 		if (movieName != string.Empty)
@@ -186,6 +186,9 @@ public class MoviePlayerSample : MonoBehaviour
 		string mediaFileNameOgv = Path.GetFileNameWithoutExtension(mediaFileName) + ".ogv";
 		string streamingMediaPath = "file:///" + Application.streamingAssetsPath + "/" + mediaFileNameOgv;
 		WWW wwwReader = new WWW(streamingMediaPath);
+		while (wwwReader.isDone == false) {
+			yield return 0;
+		}
 		yield return wwwReader;
 
 		if (wwwReader.error != null)
@@ -194,6 +197,9 @@ public class MoviePlayerSample : MonoBehaviour
 		}
 
 		movieTexture = wwwReader.movie;
+		while (movieTexture.isReadyToPlay == false) {
+			yield return 0;
+		}
 		mediaRenderer.material.mainTexture = movieTexture;
 		audioEmitter.clip = movieTexture.audioClip;
 		mediaFullPath = streamingMediaPath;

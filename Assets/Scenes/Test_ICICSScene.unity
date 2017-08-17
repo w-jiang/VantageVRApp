@@ -137,7 +137,40 @@ Prefab:
 
         Building'
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114663810982656266, guid: 5426358463c3f2c4884e7a00f4b30b05,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: hideMainText
+      objectReference: {fileID: 0}
+    - target: {fileID: 114663810982656266, guid: 5426358463c3f2c4884e7a00f4b30b05,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleTextDisplay
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174771874531544, guid: 5426358463c3f2c4884e7a00f4b30b05, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4174771874531544, guid: 5426358463c3f2c4884e7a00f4b30b05, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65193810665417800, guid: 5426358463c3f2c4884e7a00f4b30b05,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 65137984967990566, guid: 5426358463c3f2c4884e7a00f4b30b05, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 5426358463c3f2c4884e7a00f4b30b05, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &663874822
@@ -187,7 +220,7 @@ Prefab:
     - target: {fileID: 114289579642115890, guid: 6c6358baa913c26499648a131ab54137,
         type: 2}
       propertyPath: movieName
-      value: ICICS.mp4
+      value: ICICS
       objectReference: {fileID: 0}
     - target: {fileID: 4042516946627684, guid: 6c6358baa913c26499648a131ab54137, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -288,6 +321,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 463285ecd6702471a909ba810832bf0e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1485534162 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1674032006720326, guid: 5426358463c3f2c4884e7a00f4b30b05,
+    type: 2}
+  m_PrefabInternal: {fileID: 246063712}
+--- !u!65 &1485534166
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1485534162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 177.90004, y: 113.35454, z: 0.00003296198}
+  m_Center: {x: 88.95003, y: -56.677254, z: 0.00003789484}
 --- !u!1001 &1809163859
 Prefab:
   m_ObjectHideFlags: 0
